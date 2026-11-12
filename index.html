@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f5f0">
+    <meta name="description" content="Find your next favorite puzzle. Browse word, logic, number, visual, and strategy games.">
+    <title>Mindfield — Find a puzzle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Mindfield home">
+        <span class="brand-mark" aria-hidden="true">m</span>
+        <span>mindfield<span class="brand-period">.</span></span>
+      </a>
+      <a class="top-link" href="#games">Explore games <span aria-hidden="true">↘</span></a>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> A little challenge goes a long way</p>
+          <h1 id="hero-title">Find your<br><span>next favorite</span> puzzle.</h1>
+          <p class="hero-description">A hand-picked collection of games for curious minds. Pick a mood, find a game, and get delightfully stuck.</p>
+          <a class="hero-cta" href="#games">Browse the collection <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-orbit orbit-one"></div>
+          <div class="art-orbit orbit-two"></div>
+          <div class="art-tile tile-a">?</div>
+          <div class="art-tile tile-b">+</div>
+          <div class="art-tile tile-c">↗</div>
+          <div class="art-tile tile-d">◒</div>
+          <div class="art-center"><span>think</span><span>play</span><span>repeat</span></div>
+          <span class="art-spark spark-one">✳</span>
+          <span class="art-spark spark-two">✳</span>
+        </div>
+        <div class="hero-note"><span>✦</span> Your brain called. It wants a break from scrolling.</div>
+      </section>
+
+      <section class="collection" id="games" aria-labelledby="collection-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">The collection</p>
+            <h2 id="collection-title">What are you in the mood for?</h2>
+          </div>
+          <p class="game-count" id="game-count" aria-live="polite"></p>
+        </div>
+
+        <div class="controls">
+          <div class="filters" role="group" aria-label="Filter games by category">
+            <button class="filter-chip is-active" type="button" data-category="All" aria-pressed="true">All games</button>
+            <button class="filter-chip" type="button" data-category="Word" aria-pressed="false">Word</button>
+            <button class="filter-chip" type="button" data-category="Logic" aria-pressed="false">Logic</button>
+            <button class="filter-chip" type="button" data-category="Number" aria-pressed="false">Number</button>
+            <button class="filter-chip" type="button" data-category="Visual" aria-pressed="false">Visual</button>
+            <button class="filter-chip" type="button" data-category="Strategy" aria-pressed="false">Strategy</button>
+          </div>
+          <label class="search-box">
+            <span class="search-icon" aria-hidden="true">⌕</span>
+            <span class="sr-only">Search games</span>
+            <input id="game-search" type="search" placeholder="Search puzzles..." autocomplete="off">
+            <kbd>/</kbd>
+          </label>
+        </div>
+
+        <div class="game-grid" id="game-grid"></div>
+        <div class="empty-state" id="empty-state" hidden>
+          <span aria-hidden="true">☁</span>
+          <h3>No puzzles found</h3>
+          <p>Try a different search or category.</p>
+          <button type="button" id="clear-filters">Clear filters</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a class="brand footer-brand" href="#" aria-label="Mindfield home">
+        <span class="brand-mark" aria-hidden="true">m</span>
+        <span>mindfield<span class="brand-period">.</span></span>
+      </a>
+      <p>Made for the joy of figuring it out.</p>
+      <a href="#games" class="back-top">Back to top ↑</a>
+    </footer>
+  </body>
+</html>
